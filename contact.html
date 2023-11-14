@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PODCASTERK - Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: blue;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #A80FC4;
+            color: #333;
+        }
+        .logo {
+            float: left;
+            margin-right: 10px;
+        }
+
+        table {
+            width: 90%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.5); /* Transparent white background */
+        }
+
+        th, td {
+            border: 1px solid #000; /* Add border for cells */
+            padding: 8px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.2); /* Transparent white background for cells */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #thank-you {
+            display: none;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="homeImage.jpg" alt="PODCASTERK Logo" width="60" height="60">
+        </div>
+        <h1>PODCASTERK</h1>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="video-gallery.html">Video Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="admin_login.html">Admin</a>
+        </div>
+        <h2>Contact Us</h2>
+
+        <p>If you have any questions, suggestions, or feedback, please use the form below to contact us:</p>
+
+        <!-- Contact Form -->
+        <form action="process.php" method="post">
+            <table>
+                <tr>
+                    <td><label for="name">Your Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Your Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="message">Your Message:</label></td>
+                    <td><textarea id="message" name="message" rows="4" required></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" onclick="showThankYouMessage()"></td>
+                </tr>
+            </table>
+            <div id="thank-you">Thanks for the feedback! We really appreciate it.</div>
+        </form>
+    </div>
+    <script>
+        function showThankYouMessage() {
+            document.getElementById("thank-you").style.display = "block";
+        }
+    </script>
+</body>
+</html>
